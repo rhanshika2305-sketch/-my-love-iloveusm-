@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>For My Favorite Person ❤️️</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background: linear-gradient(135deg, #ff9a9e 0%, #fecfef 99%, #fecfef 100%);
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+            color: #333;
+        }
+
+        .container {
+            background: rgba(255, 255, 255, 0.9);
+            padding: 30px;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            max-width: 500px;
+            width: 100%;
+            text-align: center;
+        }
+
+        h1 {
+            color: #ff4b2b;
+            font-size: 2rem;
+            margin-bottom: 10px;
+        }
+
+        .subtitle {
+            font-size: 1.1rem;
+            color: #666;
+            margin-bottom: 20px;
+        }
+
+        .heart {
+            font-size: 50px;
+            animation: beat 1s infinite alternate;
+            margin: 15px 0;
+        }
+
+        @keyframes beat {
+            to { transform: scale(1.2); }
+        }
+
+        .message-box {
+            background: #fff5f6;
+            border-left: 4px solid #ff4b2b;
+            padding: 15px;
+            margin: 20px 0;
+            border-radius: 8px;
+            text-align: left;
+            line-height: 1.6;
+            font-size: 1.05rem;
+        }
+
+        .reasons-btn {
+            background: #ff4b2b;
+            color: baby pink;
+            border: none;
+            padding: 12px 24px;
+            font-size: 1rem;
+            border-radius: 25px;
+            cursor: pointer;
+            transition: 0.3s;
+            margin-top: 10px;
+        }
+
+        .reasons-btn:hover {
+            background: #ff416c;
+            transform: translateY(-2px);
+        }
+
+        #reasonText {
+            margin-top: 15px;
+            font-weight: bold;
+            color: #d63031;
+            min-height: 40px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1> Bachhu Suno Na! ❤️</h1>
+        <p class="subtitle">Yeh chota sa page sirf tumhare liye hai...</p>
+        
+        <div class="heart">💗🌟</div>
+
+        <div class="message-box">
+            <p><strong>Meri Jaan,</strong></p>
+            <p>Mujhe shayad roz jatana nahi aata, lekin aap meri life ka sabse khoobsurat hissa ho. Aapke saath har din special lagta hai, aur Aapki smile mera poora din bana deti hai. Thank you for being my comfort place! 🥰</p>
+        </div>
+
+        <button class="reasons-btn" onclick="showReason()">Click Karo For A Secret Note ✨</button>
+        <p id="reasonText"></p>
+    </div>
+
+    <script>
+        const reasons = [
+            "1. Aapki smile dekhkr sukkon milta h.🥹",
+            "2. Aap meri har stupid baat sunte ho. 🫶🏻",
+            "3. Aapke saath waqt ka pta hi nhi chlta. ⏳",
+            "4. Main aapke sath bilkul real reh skti hu. ✨",
+            "5. Aap mere comfort zone ho. ❤️"
+            "6. Mera aapke bina mann ni lgta. 🥺"
+            "7. Aap meri jaan ho. 🥹"
+            "8. Mai aapse sbse jada pyar krti hu. 🩷"
+            "9. Mera aapke bina koi ni hh. 🎀"
+            "10. Aap meri duniya ho mera sb kuch i love youu bhot saaraa. 🥹🫶🏻"
+        ];
+
+        let index = 0;
+
+        function showReason() {
+            document.getElementById('reasonText').innerText = reasons[index];
+            index = (index + 1) % reasons.length;
+        }
+    </script>
+</body>
+</html>
